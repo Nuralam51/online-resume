@@ -1,0 +1,195 @@
+<html>
+<head>
+  <title>Resume | Nur Alam</title>
+  <meta charset="UTF-8"><!--[if IE]><![endif]-->
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>Nur Alam | Web Developer</title>
+  <link rel="shortcut icon" href="" hreflang="en-us">
+
+  <meta property="og:title" content="Resume | Nur Alam" />
+  <meta property="og:description" content="Design-minded, detail oriented web developer passionate about combining beautiful code with beautiful design." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://www.nur-alam.tk/resume" />
+  <meta property="og:site_name" content="Resume | Nur Alam" />
+  <meta property="og:image:width" content="1280" />
+  <meta property="og:image:height" content="672" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:locale" content="en_US">
+
+  <meta name="description" content="Design-minded, detail oriented web developer passionate about combining beautiful code with beautiful design.">
+  <meta name="keywords" content="spring, vaadin 6, vaadin 7, design, development, web, nuralam, nur, java, spring, vaadin, portcity">
+  <meta name="google-site-verification" content="DCl7VAf9tcz6eD9gb67NfkNnJ1PKRNcg8qQiwpbx9Lk" />
+
+  <meta itemprop="name" content="Resume | Nur Alam">
+  <meta itemprop="description" content="Design-minded, detail oriented web developer passionate about combining beautiful code with beautiful design.">
+  <meta itemprop="image" content="">
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Catamaran:200,300,400,500,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="content"></div>
+  <script src="https://fb.me/react-0.14.6.js"></script>
+  <script src="https://fb.me/react-dom-0.14.6.js"></script>
+  <script src="https://unpkg.com/react@0.12.1/dist/JSXTransformer.js"></script>
+  <script type="text/jsx">
+
+    var DATA = {
+      name: "Hey, I'm NuR",
+      subtext: "Full Stack Web Developer in Java",
+      githubURL: 'https://github.com/Nuralam51',
+      facebookURL: 'https://facebook.com/nur.alam.51/',
+      resumeURL: 'http://nur-alam.tk/resume.pdf'
+    }
+
+    var App = React.createClass({
+      render: function() {
+        return(
+          <div className="app">
+            <Left
+              name={this.props.profileData.name}
+              subtext={this.props.profileData.subtext}
+              githubURL={this.props.profileData.githubURL}
+              facebookURL={this.props.profileData.facebookURL}
+            />
+            <Right
+              intro={this.props.profileData.intro}
+              resumeURL={this.props.profileData.resumeURL}
+            />
+          </div>
+        );
+      }
+    });
+
+    var Left = React.createClass({
+      render: function() {
+        return(
+          <div className="left">
+            <div className="bg-img"></div>
+            <div className="left-inner">
+              <div className="info">
+                <h2 className="name">{this.props.name}</h2>
+                <div className="subtext">{this.props.subtext}</div>
+                <div className="jobStatus">{this.props.jobStatus}</div>
+                <div className="social-links">
+                  <a href={this.props.githubURL} target="_blank"><i className="fa fa-github"></i></a>
+                  <a href={this.props.facebookURL}  target="_blank"><i className="fa fa-facebook"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+      }
+    });
+
+    var Right = React.createClass({
+      render: function() {
+        return(
+          <div className="right">
+            <div className="right-inner">
+              <div className="introduction">
+                <h4>Intro</h4>
+                <div className="content">
+                  <p className="intro-p">I&#39;m currently in my fourth year (out of four) studying computer science at Port City International University.</p>
+                  <p className="intro-p">I enjoy being build  both design and database, and feel right at home as a full stack developer. I&#39;m experienced in the field of developing and designing products for the web.</p>
+                  {/*<span className="intro-p job-pls">I&#39;m currently looking for my third and final co-op (from July to December 2017) before I graduate in 2020!</span>*/}
+                </div>
+              </div>
+              <div className="skills">
+                <h4>Skills</h4>
+                <div className="content">
+                  <div className="skill-category">
+                    <strong>Languages: &nbsp;</strong>
+                    <span>Java, HTML5, CSS3, Python</span>
+                  </div>
+                  <div className="skill-category">
+                    <strong>Databases: &nbsp;</strong>
+                    <span>Mysql, Microsoft SQL Sever, SQLite</span>
+                  </div>
+                  <div className="skill-category">
+                    <strong>Libraries &amp; Frameworks: &nbsp;</strong>
+                    <span>Spring, Vaadin, Swing, Bootstrap, Flask, Django</span>
+                  </div>
+                  <div className="skill-category">
+                    <strong>Tools: &nbsp;</strong>
+                    <span>Git &amp; Github, Command Line</span>
+                  </div>
+                </div>
+              </div>
+              <div className="education">
+                <h4>Education</h4>
+                <div className="content">
+                  <div className="university"><a href="http://www.portcity.edu.bd/" target="_blank">Port City International University</a></div>
+                  <div className="college">Subject of Computer Science and Engineering</div>
+                  <div className="grad-date">Expected Graduation: Dec 2020</div>
+                </div>
+              </div>
+              {/*comment of experience*/}
+              {/*<div className="experience">
+                <h4>Experience</h4>
+                <div className="content">
+                  <div className="exp-item">
+                    <div className="job">
+                      <a className="company" href="https://starry.com/" target="_blank">Starry, Inc.</a>
+                      <div className="duration">July 2016 &mdash; Present</div>
+                    </div>
+                    <div className="title">Software Engineer Co-op</div>
+                    <ul className="description">
+                      <li>Build out major features of Starry’s customer-facing android app with Cordova, utilizing JavaScript (ES6), Handlebars, CSS3, Node.js, and Backbone.js</li>
+                      <li>Propose and implement design and engineering solutions to ensure optimal and coherent user experiences for Starry’s iOS and android apps</li>
+                      <li>Engineer and maintain RESTful cloud services responsible for communicating with the Starry Station router</li>
+                    </ul>
+                  </div>
+                  <div className="exp-item">
+                    <div className="job">
+                      <a className="company" href="http://us.mullenlowe.com/" target="_blank">Mullen Lowe U.S.</a>
+                      <div className="duration">July &mdash; Dec 2015</div>
+                    </div>
+                    <div className="title">Creative Technologist Co-op</div>
+                    <ul className="description">
+                      <li>Developed and maintained code for in-house and client websites primarily using HTML, CSS, Sass, JavaScript, and jQuery</li>
+                      <li>Tested code in various browsers and mobile devices to ensure cross-browser compatibility and responsiveness</li>
+                      <li>Clients included JetBlue, Lovesac, U.S. Cellular, U.S. Dept. of Defense, and more</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>*/}
+              <div className="projects">
+                <h4>Projects</h4>
+                <div className="content">
+                  <div className="project-item">
+                    <a className="project-title" href="http://nur-alam.tk/" target="_blank">nur-alam.tk</a>
+                    <p className="project-desc">Portfolio site designed and coded from scratch to showcase my skills and past work</p>
+                  </div>
+                  <div className="project-item">
+                    <div className="project-title">ATM Management System</div>
+                    <p className="project-desc">Desktop base app built on the MEAN (Swing, Mysql) stack for my web development class. Created with the intention of providing students a better experience browsing the courses offered at University</p>
+                  </div>
+                  <div className="project-item">
+                    <a className="project-title">CNF House</a>
+                    <p className="project-desc">Web base app built for CNF company based on Vaadin 6, Microsof sql server.</p>
+                  </div>
+                  <div className="project-item">
+                    <a className="project-title" href="https://nuralam.herokuapp.com/" target="_blank">Simple Blog For All</a>
+                    <p className="project-desc">Blog web base app built on the MEAN (Django, SQLite, Bootstrap) stack for my online web development class.</p>
+                  </div>
+                </div>
+              </div>
+              <a className="resume" href={this.props.resumeURL} target="_blank"><div className="resume-link">Grab a PDF of my full resume</div></a>
+            </div>
+          </div>
+        );
+      }
+    });
+
+    ReactDOM.render(
+      <App profileData={DATA}/>,
+      document.getElementById('content')
+    );
+  </script>
+</body>
+</html>
